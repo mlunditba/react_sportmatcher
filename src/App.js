@@ -1,12 +1,13 @@
 import React from 'react';
 
-import Test from './containers/Test';
+import Layout from './hoc/Layout/Layout';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hola</h1>
-      <Test/>
+      <Layout>
+
+      </Layout>
     </div>
   );
 }
