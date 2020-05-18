@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import Layout from './hoc/Layout/Layout';
+import Home from './containers/Home/Home';
+import { Switch, Route } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <Layout>
+class App extends Component {
+  render () {
+    let routes = (
+      <Switch>
+        <Route path="/" exact component={Home} />
+      </Switch>
+    );
 
-      </Layout>
-    </div>
-  );
+    return (
+      <div className="App">
+        <Layout>
+          {routes}
+        </Layout>
+      </div>
+    );
+  }
 }
 
 export default App;

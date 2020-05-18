@@ -1,0 +1,21 @@
+.logo {
+    padding: 8px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100%;
+    -webkit-filter: drop-shadow(0 5px 5px #111);
+    filter: drop-shadow(0 5px 5px #111);
+}
+
+.logo h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    /* padding-left: 20px; */
+    /* text-shadow: 0 5px 10px #111; */
+}

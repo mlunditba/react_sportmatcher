@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 
+import './Layout.css';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 
 class Layout extends Component {
@@ -7,7 +8,7 @@ class Layout extends Component {
         return (
             <Fragment>
                 <Toolbar />
-                <main>
+                <main styleName='content'>
                     {this.props.children}
                 </main>
             </Fragment>

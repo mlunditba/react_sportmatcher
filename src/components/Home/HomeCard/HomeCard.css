@@ -1,0 +1,63 @@
+.card {
+    display: flex;
+    width: 95%;
+    height: 20rem;
+    margin: auto;
+    border-radius: 5%;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.img {
+    width: 50%;
+    border-radius: 0.75rem;
+}
+
+.gradient-right {
+    -webkit-mask-image: linear-gradient(to left, transparent 5%, black 40%);
+    mask-image: linear-gradient(to left, transparent 5%, black 40%);
+}
+
+.gradient-left {
+    -webkit-mask-image: linear-gradient(to right, transparent 5%, black 40%);
+    mask-image: linear-gradient(to right, transparent 5%, black 40%);
+}
+
+.body {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.title {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.body-text {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #677788;
+}
+
+.btn {
+    width: 50%;
+    font-size: 1.1rem;
+}
+
+.btn-right-align {
+    display: flex;
+    align-self: flex-end;
+}
