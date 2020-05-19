@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
+import Aos from 'aos';
 
 import './Home.css';
 import HomeCard from '../../components/Home/HomeCard/HomeCard';
 
 class Home extends Component {
+    componentDidMount() {
+        Aos.init({ duration: 1500, once: true, startEvent: 'load' });
+    }
+
     render () {
         return (
             <div styleName='home' id='home'>
                 <div styleName='main'>
-                    <h1 styleName='title'>Sports like you never thought was possible</h1>
-                    <p>Find people who share your passion. Follow a healthy and active lifestyle.<br/>Playing sports was never this easy.</p>
+                        <h1 data-aos="fade-up" data-aos-delay='0' styleName='title'>Sports like you never thought was possible</h1>
+                        <p data-aos="fade-up" data-aos-delay='200'>Find people who share your passion. Follow a healthy and active lifestyle.<br/>Playing sports was never this easy.</p>
+            
                 </div>
                 <div styleName='cards'>
                     <h2>Explore every feature SportMatcher has to offer and make the most out of it.</h2>

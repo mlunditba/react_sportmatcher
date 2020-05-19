@@ -11,8 +11,14 @@ const navigationItems = () => (
             <NavigationItem link="/matches" exact>Matches</NavigationItem>
             <NavigationItem link="/clubs" exact>Clubs</NavigationItem>
             <NavigationItem link="/pitches" exact>Pitches</NavigationItem>
-            <Button btnType='informative'>Sign in</Button>
-            <Button btnType='informative'>Sign up</Button>
+            <div styleName='accountBtns'>
+                <div styleName='accountBtn'>
+                    <Button btnType='informative'>Sign in</Button>
+                </div>
+                <div styleName='accountBtn'>
+                    <Button btnType='informative'>Sign up</Button>
+                </div>
+            </div>
         </ul>
     </div>
 );

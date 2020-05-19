@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Logo.css';
-import basketballLogo from '../../assets/images/logo.png';
+// import basketballLogo from '../../assets/images/logo.png';
 
 const logo = () => (
     <div styleName='logo'>

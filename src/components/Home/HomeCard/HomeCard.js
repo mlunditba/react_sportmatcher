@@ -7,7 +7,7 @@ const homeCard = (props) => {
     let card;
     if(props.imgLeft) {
         card = (
-            <div styleName='card'>
+            <div data-aos="fade-left" styleName='card'>
                 <img styleName='img gradient-right' src={props.imageUrl} alt={props.imageAlt} />
                 <div styleName='body left-align'>
                     <h3 styleName='title'>{props.title}</h3>
@@ -20,7 +20,7 @@ const homeCard = (props) => {
         );
     } else {
         card = (
-            <div styleName='card'>
+            <div data-aos="fade-right" styleName='card'>
                 <div styleName='body right-align'>
                     <h3 styleName='title'>{props.title}</h3>
                     <p styleName='body-text'>{props.children}</p>

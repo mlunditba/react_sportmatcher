@@ -16,3 +16,15 @@
     display: flex;
     height: 100%;
 }
+
+.accountBtns {
+    display: flex;
+    margin: 1rem 1rem;
+    height: 50%;
+    width: 11rem;
+    justify-content: space-between;
+}
+
+.accountBtn {
+    width: 45%;
+}

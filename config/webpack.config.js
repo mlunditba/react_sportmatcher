@@ -375,7 +375,8 @@ module.exports = function(webpackEnv) {
                   [
                     require.resolve("babel-plugin-react-css-modules"),
                     {
-                      generateScopedName: localIdentName
+                      generateScopedName: localIdentName,
+                      autoResolveMultipleImports: true
                     }
                   ],
                   [
