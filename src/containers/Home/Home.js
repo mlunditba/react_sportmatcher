@@ -4,6 +4,10 @@ import CountUp from 'react-countup';
 
 import './Home.css';
 import HomeCard from '../../components/Home/HomeCard/HomeCard';
+import personIcon from '../../assets/images/personIcon.png';
+import houseIcon from '../../assets/images/houseIcon.png';
+import pitchIcon from '../../assets/images/pitchIcon.png';
+import trophyIcon from '../../assets/images/trophyIcon.png';
 
 class Home extends Component {
     componentDidMount() {
@@ -14,24 +18,28 @@ class Home extends Component {
         return (
             <div styleName='home' id='home'>
                 <div styleName='main'>
-                        <h1 data-aos="fade-up" data-aos-delay='0' styleName='title'>Sports like you never thought was possible</h1>
+                        <h1 data-aos="fade-up" data-aos-delay='0' styleName='title'>Sports like you never<br/>thought was possible</h1>
                         <p data-aos="fade-up" data-aos-delay='200'>Find people who share your passion. Follow a healthy and active lifestyle.<br/>Playing sports was never this easy.</p>
                 </div>
                 <div styleName='cards'>
                     <div styleName='counter-container'>
                         <div data-aos="fade-up" styleName='counter'>
+                            <img src={personIcon} alt="Person" />
                             <CountUp start={0} end={30000} separator=',' suffix='+' />
                             <p>Players</p>
                         </div>
                         <div data-aos="fade-up" data-aos-delay='200' styleName='counter'>
+                            <img src={houseIcon} alt="Club" />
                             <CountUp end={250} delay={0.5} separator=',' suffix='+' />
                             <p>Clubs</p>
                         </div>
                         <div data-aos="fade-up" data-aos-delay='400'styleName='counter'>
+                            <img src={pitchIcon} alt="Pitch" />
                             <CountUp end={700} delay={0.4} separator=',' suffix='+' />
                             <p>Pitches</p>
                         </div>
                         <div data-aos="fade-up" data-aos-delay='600' styleName='counter'>
+                            <img src={trophyIcon} alt="Trophy" />
                             <CountUp end={50} delay={0.6} separator=',' suffix='+' />
                             <p>Tournaments</p>
                         </div>

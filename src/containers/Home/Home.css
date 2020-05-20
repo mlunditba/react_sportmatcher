@@ -81,3 +81,9 @@
     font-size: 1.5rem;
     color: black;
 }
+
+.counter img {
+    height: 4.5rem;
+    width: 4.5rem;
+    margin-bottom: 1rem;
+}
