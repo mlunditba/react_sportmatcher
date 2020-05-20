@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Aos from 'aos';
+import CountUp from 'react-countup';
 
 import './Home.css';
 import HomeCard from '../../components/Home/HomeCard/HomeCard';
@@ -15,10 +16,27 @@ class Home extends Component {
                 <div styleName='main'>
                         <h1 data-aos="fade-up" data-aos-delay='0' styleName='title'>Sports like you never thought was possible</h1>
                         <p data-aos="fade-up" data-aos-delay='200'>Find people who share your passion. Follow a healthy and active lifestyle.<br/>Playing sports was never this easy.</p>
-            
                 </div>
                 <div styleName='cards'>
-                    <h2>Explore every feature SportMatcher has to offer and make the most out of it.</h2>
+                    <div styleName='counter-container'>
+                        <div data-aos="fade-up" styleName='counter'>
+                            <CountUp end={30000} separator=',' suffix='+' />
+                            <p>Players</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay='200' styleName='counter'>
+                            <CountUp end={250} separator=',' suffix='+' />
+                            <p>Clubs</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay='400'styleName='counter'>
+                            <CountUp end={700} separator=',' suffix='+' />
+                            <p>Pitches</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay='600' styleName='counter'>
+                            <CountUp end={50} separator=',' suffix='+' />
+                            <p>Tournaments</p>
+                        </div>
+                    </div>
+                    <h2 data-aos="fade-up">Explore every feature SportMatcher has to offer and make the most out of it.</h2>
                     <HomeCard imageUrl='/soccer.jpg' imageAlt='Soccer' imgLeft title="Search among hundreds of available matches." btnTxt='Find matches'>
                         Join any match you want across a variety of different sports in a simple way. Just filter the nearest clubs and events that best suit you and your schedule. Your team is waiting for you!
                     </HomeCard>

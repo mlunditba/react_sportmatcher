@@ -41,9 +41,43 @@
 .cards {
     width: 80%;
     margin: auto;
-    margin-top: 5rem;
+    margin-top: 7.5rem;
 }
 
 .cards h2 {
     text-align: center;
+    margin: 7.5rem;
+    font-size: 2.5rem;
+}
+
+.counter-container {
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    margin: auto;
+    align-items: center;
+    height: 100%;
+    border-radius: .375rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #fbfbfc;
+    color: #ff5938;
+}
+
+.counter p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    color: black;
 }
