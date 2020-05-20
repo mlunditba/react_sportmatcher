@@ -1,7 +1,4 @@
 .content {
-    /* margin-top: 90px; */
-    /* height: 800px; */
-    /* background-image: url("/background.svg");
-    background-repeat: no-repeat; */
     box-sizing: border-box;
+    padding-bottom: 5rem;
 }
