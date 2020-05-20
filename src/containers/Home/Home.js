@@ -20,19 +20,19 @@ class Home extends Component {
                 <div styleName='cards'>
                     <div styleName='counter-container'>
                         <div data-aos="fade-up" styleName='counter'>
-                            <CountUp end={30000} separator=',' suffix='+' />
+                            <CountUp start={0} end={30000} separator=',' suffix='+' />
                             <p>Players</p>
                         </div>
                         <div data-aos="fade-up" data-aos-delay='200' styleName='counter'>
-                            <CountUp end={250} separator=',' suffix='+' />
+                            <CountUp end={250} delay={0.5} separator=',' suffix='+' />
                             <p>Clubs</p>
                         </div>
                         <div data-aos="fade-up" data-aos-delay='400'styleName='counter'>
-                            <CountUp end={700} separator=',' suffix='+' />
+                            <CountUp end={700} delay={0.4} separator=',' suffix='+' />
                             <p>Pitches</p>
                         </div>
                         <div data-aos="fade-up" data-aos-delay='600' styleName='counter'>
-                            <CountUp end={50} separator=',' suffix='+' />
+                            <CountUp end={50} delay={0.6} separator=',' suffix='+' />
                             <p>Tournaments</p>
                         </div>
                     </div>
