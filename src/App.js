@@ -13,7 +13,7 @@ class App extends Component {
     );
 
     return (
-      <div className="App">
+      <div style={{overflowX: 'hidden'}}>
         <Layout>
           {routes}
         </Layout>

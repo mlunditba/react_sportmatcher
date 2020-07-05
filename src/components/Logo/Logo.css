@@ -1,21 +1,45 @@
 .logo {
-    padding: 8px;
+    padding: 0.5rem;
     height: 100%;
     box-sizing: border-box;
     display: flex;
     align-items: center;
 }
 
-.logo img {
+/*.logo img {
     height: 100%;
     -webkit-filter: drop-shadow(0 5px 5px #111);
     filter: drop-shadow(0 5px 5px #111);
-}
+}*/
 
 .logo h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: bold;
     color: white;
     /* padding-left: 20px; */
     /* text-shadow: 0 5px 10px #111; */
+}
+
+@media (max-width: 1199px) {
+    .logo h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .logo h1 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo h1 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo h1 {
+        font-size: 1.5rem;
+    }
 }

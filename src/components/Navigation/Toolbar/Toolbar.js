@@ -26,7 +26,7 @@ class Toolbar extends Component {
                 <div styleName='logo'>
                     <Logo/>
                 </div>
-                <nav>
+                <nav styleName={'desktopOnly'}>
                     <NavigationItems />
                 </nav>
             </header>
