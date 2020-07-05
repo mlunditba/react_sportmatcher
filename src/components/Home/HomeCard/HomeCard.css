@@ -1,7 +1,7 @@
 .card {
     display: flex;
     width: 95%;
-    height: 20rem;
+    height: 22.5rem;
     margin: auto;
     border-radius: 5%;
     margin-top: 2.5rem;
@@ -42,22 +42,114 @@
 .title {
     margin-top: 0;
     margin-bottom: 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 .body-text {
     margin-top: 0;
     margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: #677788;
 }
 
 .btn {
-    width: 50%;
-    font-size: 1.1rem;
+    width: 45%;
+    font-size: 1.2rem;
+    height: 15%;
 }
 
 .btn-right-align {
     display: flex;
     align-self: flex-end;
+}
+
+@media (max-width: 1199px) {
+    .card {
+        height: 20rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .body-text {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .card {
+        height: 18rem;
+    }
+
+    .title {
+        font-size: 1.3rem;
+    }
+
+    .body-text {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .card {
+        height: 15rem;
+    }
+
+    .title {
+        font-size: 1.1rem;
+    }
+
+    .body-text {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        height: 20%;
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        height: 100%;
+    }
+
+    .body {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .left-align {
+        text-align: center;
+    }
+
+    .right-align {
+        text-align: center;
+    }
+
+    .btn {
+        width: 45%;
+        height: 20%;
+        display: flex;
+        align-self: center;
+        font-size: 0.8rem;
+    }
+
+    .btn-right-align {
+        display: flex;
+        align-self: center;
+    }
 }

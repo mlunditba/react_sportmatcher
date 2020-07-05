@@ -62,3 +62,41 @@
     margin-right: 1rem;
     /* Hover color: #d5d4d9 */
 }
+
+@media (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+
+    .column h4 {
+        font-size: 1rem;
+    }
+
+    .column ul {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        width: 50%;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .column h4 {
+        margin-bottom: 1rem;
+    }
+
+    .end-row {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+

@@ -39,7 +39,7 @@
 }
 
 .cards {
-    width: 80%;
+    width: 90%;
     margin: auto;
     margin-top: 7.5rem;
 }
@@ -83,8 +83,8 @@
 }
 
 .counter img {
-    height: 4.5rem;
-    width: 4.75rem;
+    height: 35%;
+    width: 35%;
     margin-bottom: 1rem;
 }
 
@@ -98,6 +98,25 @@
     }
 
     .main p {
+        font-size: 1.3rem;
+    }
+
+    .cards {
+        margin-top: 6rem;
+    }
+
+    .cards h2 {
+        margin: 6.5rem;
+        font-size: 2rem;
+    }
+
+    .counter-container {
+        height: 13rem;
+        margin-bottom: 3rem;
+        font-size: 1.8rem;
+    }
+
+    .counter p {
         font-size: 1.3rem;
     }
 }
@@ -114,6 +133,25 @@
     .main p {
         font-size: 1rem;
     }
+
+    .cards {
+        margin-top: 5rem;
+    }
+
+    .cards h2 {
+        margin: 6rem;
+        font-size: 1.55rem;
+    }
+
+    .counter-container {
+        height: 11rem;
+        margin-bottom: 2.5rem;
+        font-size: 1.6rem;
+    }
+
+    .counter p {
+        font-size: 1.15rem;
+    }
 }
 
 @media (max-width: 767px) {
@@ -128,6 +166,25 @@
     .main p {
         font-size: 0.9rem;
     }
+
+    .cards {
+        margin-top: 4rem;
+    }
+
+    .cards h2 {
+        margin: 5.5rem;
+        font-size: 1.15rem;
+    }
+
+    .counter-container {
+        height: 8.5rem;
+        margin-bottom: 1.4rem;
+        font-size: 1.4rem;
+    }
+
+    .counter p {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -141,5 +198,29 @@
 
     .main p {
         font-size: 0.9rem;
+    }
+
+    .cards h2 {
+        margin: 2.5rem;
+        font-size: 1.25rem;
+    }
+
+    .counter-container {
+        height: 100%;
+        flex-direction: column;
+        margin-bottom: 1.2rem;
+        font-size: 1.75rem;
+    }
+
+    .counter {
+        width: 50%;
+        height: 100%;
+        margin-bottom: 1.5rem;
+        padding: 1rem 0 1rem;
+    }
+
+    .counter p {
+        margin-top: 0.25rem;
+        font-size: 1.2rem;
     }
 }

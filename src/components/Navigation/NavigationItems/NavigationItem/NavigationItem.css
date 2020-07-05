@@ -5,6 +5,12 @@
     width: auto;
     align-items: center;
     font-size: 1.25rem;
+    transition: box-shadow .25s ease,transform .25s ease,-webkit-transform .25s ease;
+}
+
+.navigationItem:hover {
+    transform: translate3d(0,-3px,0);
+    transition: box-shadow .25s ease,transform .25s ease,-webkit-transform .25s ease;
 }
 
 .navigationItem a {
