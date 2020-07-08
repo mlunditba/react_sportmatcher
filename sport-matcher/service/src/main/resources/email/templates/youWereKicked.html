@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+      <title th:remove="all" th:text="#{user_kicked_title(${event_name})}"></title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+      <div style="background-color: dodgerblue;  color: white; font-family: 'Barlow Condensed', sans-serif;font-size: 40px;font-weight: 600;  padding: 20px;">
+          Sport Matcher
+      </div>
+      <p th:text="${email_body}"></p>
+  </body>
+</html>
