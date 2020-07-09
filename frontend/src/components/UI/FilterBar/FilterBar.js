@@ -2,7 +2,7 @@ import React from 'react';
 
 import './FilterBar.css';
 import FilterCategory from "./FilterCategory/FilterCategory";
-// USE FORM!!!
+// USE FORM!!! && RADIUM
 const filterBar = (props) => (
     <div styleName='container'>
         {props.categories.map(cat => (

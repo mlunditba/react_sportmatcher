@@ -8,14 +8,14 @@ class FilterCategory extends Component {
 
         switch(this.props.type) {
             case('text'):
-                filter = <input type='text'/>;
+                filter = <input type='text' placeholder='Search' styleName='input black'/>;
                 break;
             case('datetime'):
-                filter = <input type='datetime-local'/>;
+                filter = <input type='datetime-local' styleName='input'/>;
                 break;
             case('select'):
                 filter = (
-                    <select>
+                    <select styleName='input'>
                         {this.props.options.map(op => (
                             <option value={op}>{op}</option>
                         ))}
@@ -25,8 +25,8 @@ class FilterCategory extends Component {
         }
 
         return (
-            <div>
-                <p>{this.props.label}</p>
+            <div styleName='filter'>
+                <p styleName='label'>{this.props.label}</p>
                 {filter}
             </div>
         );
