@@ -1,12 +1,14 @@
 import React from 'react';
 
 import './Logo.css';
+import {NavLink} from "react-router-dom";
 // import basketballLogo from '../../assets/images/logo.png';
 
 const logo = () => (
     <div styleName='logo'>
         {/* <img src={basketballLogo} alt="Sport Matcher" /> */}
-        <h1>SportMatcher</h1>
+        <NavLink
+            to="/" exact><h1>SportMatcher</h1></NavLink>
     </div>
 );
 

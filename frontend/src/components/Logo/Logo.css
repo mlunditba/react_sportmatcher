@@ -20,6 +20,10 @@
     /* text-shadow: 0 5px 10px #111; */
 }
 
+.logo a {
+    text-decoration: none;
+}
+
 @media (max-width: 1199px) {
     .logo h1 {
         font-size: 2rem;
