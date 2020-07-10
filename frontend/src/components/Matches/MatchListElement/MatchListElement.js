@@ -94,7 +94,7 @@ class MatchListElement extends Component {
         const endHourFormat = `${(endHour < 10 ? '0' : '') + endHour}:${(endMinute < 10 ? '0' : '') + endMinute}`;
 
         return (
-            <Link to={this.props.match.url + this.props.match_id} styleName='link'>
+            <Link to={this.props.match.url + '/' + this.props.match_id} styleName='link'>
                 <div styleName='container'>
                     <div styleName='img-container'>{img}</div>
                     <div styleName='outer-label-group'>
@@ -108,10 +108,9 @@ class MatchListElement extends Component {
                         <div styleName='label-group date-label'>
                             <p>{dateFormat}</p><p styleName='hour-label'>{startHourFormat} - {endHourFormat}</p>
                         </div>
-                        <div styleName='label-group vacancies-label' /*data-tip data-for="registerTip"*/>
+                        <div styleName={'label-group vacancies-label' + `${(this.props.maxParticipants > 15 ? ' vacancies-small ' : '')}`} /*data-tip data-for="registerTip"*/>
                             {Array.from(Array(this.props.inscriptionCount), (e,i) => (<div key={i} styleName='vacancies-item red'>|</div>))}
                             {Array.from(Array(this.props.maxParticipants - this.props.inscriptionCount), (e,i) => (<div key={i} styleName='vacancies-item green'>|</div>))}
-
                         </div>
                         {/*<ReactTooltip id="registerTip" place="top" effect="solid">
                             Tooltip for the register button

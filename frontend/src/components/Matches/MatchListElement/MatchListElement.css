@@ -83,12 +83,18 @@
 .vacancies-label {
     width: 15%;
     flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    font-size: 1.75rem;
 }
 
 .vacancies-item {
-    font-size: 1.75rem;
     font-weight: bolder;
     align-self: center;
+}
+
+.vacancies-small {
+    font-size: 1.5rem;
 }
 
 .green {
