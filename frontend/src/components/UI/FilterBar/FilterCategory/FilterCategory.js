@@ -17,10 +17,12 @@ class FilterCategory extends Component {
                 filter = (
                     <select styleName='input'>
                         {this.props.options.map(op => (
-                            <option value={op}>{op}</option>
+                            <option key={op} value={op}>{op}</option>
                         ))}
                     </select>
                 );
+                break;
+            default:
                 break;
         }
 

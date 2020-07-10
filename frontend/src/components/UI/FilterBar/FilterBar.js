@@ -6,7 +6,7 @@ import FilterCategory from "./FilterCategory/FilterCategory";
 const filterBar = (props) => (
     <div styleName='container'>
         {props.categories.map(cat => (
-            <FilterCategory label={cat.label} type={cat.type} options={cat.options} />
+            <FilterCategory key={cat.label} label={cat.label} type={cat.type} options={cat.options} />
         ))}
     </div>
 );

@@ -36,7 +36,7 @@ const matches = [
         createdAt: "2020-07-09T20:22:32.894494Z",
         description: "Evento de prueba. Unanse que la vamos a pasar bien.",
         endsAt: "2020-07-30T18:00:00Z",
-        eventid: 1,
+        eventid: 2,
         inscriptionCount: 2,
         inscriptionEnd: "2020-07-28T03:00:00Z",
         maxParticipants: 10,
@@ -47,11 +47,11 @@ const matches = [
             createdAt: "2020-07-09T20:22:27.942536Z",
             name: "Cancha de prueba",
             pitchid: 1,
-            sport: "TENNIS"
+            sport: "SOCCER"
         },
         startsAt: "2020-07-30T15:00:00Z"
     }
-]
+];
 
 class Home extends Component {
     componentDidMount() {
@@ -74,10 +74,11 @@ class Home extends Component {
                     <div styleName='matches-list'>
                         {matches.map(m => (
                             <MatchListElement
+                                key={m.eventid}
                                 match_id={m.eventid}
                                 name={m.name}
                                 sport={m.pitch.sport}
-                                location={m.pitch.club.location}
+                                loc={m.pitch.club.location}
                                 startsAt={m.startsAt}
                                 endsAt={m.endsAt}
                                 maxParticipants={m.maxParticipants}
