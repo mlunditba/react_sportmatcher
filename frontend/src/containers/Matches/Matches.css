@@ -37,5 +37,10 @@
 }
 
 .container {
+    width: 100%;
+}
 
+.matches-list {
+    width: 80%;
+    margin: 2% auto 1%;
 }

@@ -8,7 +8,7 @@ class FilterCategory extends Component {
 
         switch(this.props.type) {
             case('text'):
-                filter = <input type='text' placeholder='Search' styleName='input black'/>;
+                filter = <input type='text' placeholder='Search' styleName='input dark-grey'/>;
                 break;
             case('datetime'):
                 filter = <input type='datetime-local' styleName='input'/>;

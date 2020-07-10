@@ -1,0 +1,100 @@
+.container {
+    width: 100%;
+    border: 1px solid #eff2f7;
+    border-radius: 0.75rem;
+    background-color: #fff;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    box-shadow: 0 0 1.25rem rgba(31,45,61,.05);
+    color: #151b26;
+    margin: 1%;
+    transition: all .2s ease;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+.link {
+    text-decoration: none;
+}
+
+.img-container {
+    width: 7%;
+    margin: auto;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.container p {
+    margin: 0;
+}
+
+.outer-label-group {
+    width: 100%;
+    padding-left: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.label-group {
+    display: flex;
+    flex-flow: column;
+    padding-left: 2%;
+    justify-content: center;
+}
+
+.label-group:first-child {
+    padding-left: 0;
+}
+
+.outer-name-label {
+    width: 30%;
+}
+
+.sport-label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #8599B7;
+}
+
+.name-label {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.location-label {
+    width: 25%;
+}
+
+.date-label {
+    width: 15%;
+}
+
+.hour-label {
+    font-size: 0.8rem;
+}
+
+.vacancies-label {
+    width: 15%;
+    flex-flow: row;
+}
+
+.vacancies-item {
+    font-size: 1.75rem;
+    font-weight: bolder;
+    align-self: center;
+}
+
+.green {
+    color: seagreen;
+}
+
+.red {
+    color: #cc472c;
+}
