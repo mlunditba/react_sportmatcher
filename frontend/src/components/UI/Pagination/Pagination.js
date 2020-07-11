@@ -9,53 +9,46 @@ const pagination = (props) => (
         {props.totalPageCount !== 1 ? <div styleName='pageItems'>
             <Link styleName={'pageItem' + (props.pageNum === 1 ? ' disabled' : '')}
                 to={props.match.url + '?pageNum=1'}
-                exact
-                onClick={() => (props.pageNum !== 1)? props.onFetchMatches(1) : null}>
-                    <p>First</p>
+                exact>
+                    <button onClick={() => props.onFetchMatches(1)} disabled={props.pageNum === 1}>First</button>
             </Link>
             { props.pageNum > 2 ?
                 <Link styleName='pageItem'
                     to={props.match.url + '?pageNum=' + (props.pageNum - 2)}
-                    exact
-                    onClick={() => props.onFetchMatches(props.pageNum - 2)}>
-                        <p>{props.pageNum - 2}</p>
+                    exact>
+                        <button onClick={() => props.onFetchMatches(props.pageNum - 2)}>{props.pageNum - 2}</button>
                 </Link> : null
             }
             { props.pageNum > 1 ?
                 <Link styleName='pageItem'
                     to={props.match.url + '?pageNum=' + (props.pageNum - 1)}
-                    exact
-                    onClick={() => props.onFetchMatches(props.pageNum - 1)}>
-                        <p>{props.pageNum - 1}</p>
+                    exact>
+                        <button onClick={() => props.onFetchMatches(props.pageNum - 1)}>{props.pageNum - 1}</button>
                 </Link> : null
             }
             <Link styleName='pageItem active'
                 to={props.match.url + '?pageNum=' + (props.pageNum)}
-                exact
-                onClick={() => props.onFetchMatches(props.pageNum)}>
-                    <p>{props.pageNum}</p>
+                exact>
+                    <button onClick={() => props.onFetchMatches(props.pageNum)} styleName='active'>{props.pageNum}</button>
             </Link>
             { (props.totalPageCount - props.pageNum) >= 1 ?
                 <Link styleName='pageItem'
                     to={props.match.url + '?pageNum=' + (props.pageNum + 1)}
-                    exact
-                    onClick={() => props.onFetchMatches(props.pageNum + 1)}>
-                        <p>{props.pageNum + 1}</p>
+                    exact>
+                        <button onClick={() => props.onFetchMatches(props.pageNum + 1)}>{props.pageNum + 1}</button>
                 </Link> : null
             }
             { (props.totalPageCount - props.pageNum) >= 2 ?
                 <Link styleName='pageItem'
                     to={props.match.url + '?pageNum=' + (props.pageNum + 2)}
-                    exact
-                    onClick={() => props.onFetchMatches(props.pageNum + 2)}>
-                        <p>{props.pageNum + 2}</p>
+                    exact>
+                        <button onClick={() => props.onFetchMatches(props.pageNum + 2)}>{props.pageNum + 2}</button>
                 </Link> : null
             }
             <Link styleName={'pageItem' + (props.pageNum === props.totalPageCount ? ' disabled' : '')}
-                to={props.match.url + '?pageNum=' + props.totalPageCount}
-                exact
-                onClick={() => (props.pageNum !== props.totalPageCount)? props.onFetchMatches(props.totalPageCount) : null}>
-                    <p>Last</p>
+                  to={props.match.url + '?pageNum=' + props.totalPageCount}
+                  exact>
+                <button onClick={() => props.onFetchMatches(props.totalPageCount)} disabled={props.pageNum === props.totalPageCount}>Last</button>
             </Link>
         </div> : null}
     </div>

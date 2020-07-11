@@ -8,7 +8,7 @@ const navigationItems = () => (
     <div styleName='nav'>
         <ul styleName='navigationItems'>
             <NavigationItem link="/aboutus" exact>About us</NavigationItem>
-            <NavigationItem link="/matches" exact>Matches</NavigationItem>
+            <NavigationItem link="/matches">Matches</NavigationItem>
             <NavigationItem link="/clubs" exact>Clubs</NavigationItem>
             <NavigationItem link="/pitches" exact>Pitches</NavigationItem>
             <div styleName='accountBtns'>

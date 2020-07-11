@@ -9,6 +9,7 @@
 
 .container p {
     margin: 0;
+    align-self: center;
 }
 
 .pageItems {
@@ -37,10 +38,23 @@
     width: 5rem;
 }
 
-.pageItem p {
+.pageItem button {
+    width: 100%;
+    height: 100%;
+    border: none;
     font-weight: bold;
-    margin: 0;
-    align-self: center;
+    color: #063259;
+    font-size: 1.1rem;
+}
+
+.pageItem button:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.pageItem button:disabled {
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, 0.05);
 }
 
 .disabled {
@@ -49,6 +63,6 @@
 }
 
 .active {
-    color: white;
+    color: white !important;
     background-color: #375a7a;
 }
