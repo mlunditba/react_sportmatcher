@@ -31,7 +31,7 @@ export const fetchMatches = (pageNum) => {
         const queryParams = '?pageNum=' + pageNum;
         axios.get( '/events' + queryParams )
             .then( res => {
-                dispatch(fetchMatchesSuccess(res.data.events, res.data.eventCount, res.data.initialPageIndex, res.data.finalPageNum, pageNum));
+                dispatch(fetchMatchesSuccess(res.data.events, res.data.eventCount, res.data.initialPageIndex, res.data.lastPageNum, pageNum));
             } )
             .catch( err => {
                 dispatch(fetchMatchesFailure(err));

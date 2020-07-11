@@ -6,6 +6,7 @@ import './Matches.css';
 import FilterBar from "../../components/UI/FilterBar/FilterBar";
 import MatchListElement from "../../components/Matches/MatchListElement/MatchListElement";
 import * as actions from '../../store/actions';
+import Pagination from "../../components/UI/Pagination/Pagination";
 
 const filterCategories = [
     { label: 'Search matches', type: 'text' },
@@ -42,6 +43,13 @@ class Home extends Component {
                                 maxParticipants={m.maxParticipants}
                                 inscriptionCount={m.inscriptionCount} />
                         ))}
+                        <Pagination
+                            pageInitIndex={this.props.pageInitIndex}
+                            pageItemCount={this.props.matches.length}
+                            totalItemCount={this.props.totalMatchCount}
+                            pageNum={this.props.pageNum}
+                            totalPageCount={this.props.totalPageCount}
+                            onFetchMatches={this.props.onFetchMatches} />
                     </div>
                 </div>
             </div>
@@ -52,6 +60,10 @@ class Home extends Component {
 const mapStateToProps = state => {
     return {
         matches: state.match.matches,
+        totalMatchCount: state.match.totalMatchCount,
+        pageInitIndex: state.match.pageInitIndex,
+        totalPageCount: state.match.totalPageCount,
+        pageNum: state.match.pageNum,
         loading: state.match.loading
     };
 };

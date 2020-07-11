@@ -1,0 +1,54 @@
+.container {
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    color: #151b26;
+    font-size: 1.1rem;
+    margin: 1% 0.5% 0.5%;
+}
+
+.container p {
+    margin: 0;
+}
+
+.pageItems {
+    height: 100%;
+    display: table;
+    border-collapse: collapse;
+    box-shadow: 0 0 1.25rem rgba(31,45,61,.05);
+}
+
+.pageItem {
+    width: 2rem;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    color: #063259;
+    border: 1px solid #dfdfeb;
+}
+
+.pageItem:first-child {
+    width: 5rem;
+}
+
+.pageItem:last-child {
+    width: 5rem;
+}
+
+.pageItem p {
+    font-weight: bold;
+    margin: 0;
+    align-self: center;
+}
+
+.disabled {
+    color: grey;
+    background-color: #eee;
+}
+
+.active {
+    color: white;
+    background-color: #375a7a;
+}

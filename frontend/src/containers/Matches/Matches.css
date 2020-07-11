@@ -44,3 +44,7 @@
     width: 80%;
     margin: 2% auto 1%;
 }
+
+.hola:first-child {
+    color: black;
+}
