@@ -1,3 +1,4 @@
 export {
-    fetchMatches
+    fetchMatches,
+    fetchMatch
 } from './match';

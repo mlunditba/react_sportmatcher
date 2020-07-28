@@ -15,13 +15,47 @@ const filterCategories = [
     { label: 'Vacancies', type: 'select', options: [1, 2, 3] }
 ];
 
-class Home extends Component {
+class Matches extends Component {
     componentDidMount() {
         this.props.onFetchMatches(1);
         Aos.init({ duration: 1500, once: true, startEvent: 'load' });
     }
 
     render () {
+        let matches = null;
+        if(this.props.matches.length !== 0) {
+            matches = (
+                <div styleName='matches-list'>
+                    {this.props.matches.map(m => (
+                        <MatchListElement
+                            key={m.eventid}
+                            match_id={m.eventid}
+                            name={m.name}
+                            pitch_id={m.pitch.pitchid}
+                            sport={m.pitch.sport}
+                            loc={m.pitch.club.location}
+                            startsAt={m.startsAt}
+                            endsAt={m.endsAt}
+                            maxParticipants={m.maxParticipants}
+                            inscriptionCount={m.inscriptionCount} />
+                    ))}
+                    <Pagination
+                        pageInitIndex={this.props.pageInitIndex}
+                        pageItemCount={this.props.matches.length}
+                        totalItemCount={this.props.totalMatchCount}
+                        pageNum={this.props.pageNum}
+                        totalPageCount={this.props.totalPageCount}
+                        onFetchMatches={this.props.onFetchMatches} />
+                </div>
+            );
+        } else {
+            matches = (
+                <div styleName='matches-list empty-list'>
+                    <h3>No matches found.</h3>
+                </div>
+            );
+        }
+
         return (
             <div styleName='matches' id='matches'>
                 <div styleName='main'>
@@ -30,27 +64,7 @@ class Home extends Component {
                 </div>
                 <div styleName='container'>
                     <FilterBar categories={filterCategories} />
-                    <div styleName='matches-list'>
-                        {this.props.matches.map(m => (
-                            <MatchListElement
-                                key={m.eventid}
-                                match_id={m.eventid}
-                                name={m.name}
-                                sport={m.pitch.sport}
-                                loc={m.pitch.club.location}
-                                startsAt={m.startsAt}
-                                endsAt={m.endsAt}
-                                maxParticipants={m.maxParticipants}
-                                inscriptionCount={m.inscriptionCount} />
-                        ))}
-                        <Pagination
-                            pageInitIndex={this.props.pageInitIndex}
-                            pageItemCount={this.props.matches.length}
-                            totalItemCount={this.props.totalMatchCount}
-                            pageNum={this.props.pageNum}
-                            totalPageCount={this.props.totalPageCount}
-                            onFetchMatches={this.props.onFetchMatches} />
-                    </div>
+                    {matches}
                 </div>
             </div>
         );
@@ -74,4 +88,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Matches);

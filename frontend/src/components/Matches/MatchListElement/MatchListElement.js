@@ -94,7 +94,10 @@ class MatchListElement extends Component {
         const endHourFormat = `${(endHour < 10 ? '0' : '') + endHour}:${(endMinute < 10 ? '0' : '') + endMinute}`;
 
         return (
-            <Link to={this.props.match.url + '/' + this.props.match_id} styleName='link'>
+            <Link to={{
+                pathname: this.props.match.url + '/' + this.props.match_id,
+                state: {pitch_id: this.props.pitch_id} }}
+                  styleName='link'>
                 <div styleName='container'>
                     <div styleName='img-container'>{img}</div>
                     <div styleName='outer-label-group'>

@@ -45,6 +45,7 @@
     margin: 2% auto 1%;
 }
 
-.hola:first-child {
-    color: black;
+.empty-list {
+    color: #737491;
+    text-align: center;
 }
